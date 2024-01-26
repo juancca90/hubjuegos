@@ -18,7 +18,6 @@ const template = () => `
 `;
 
 const dataService = async () => {};
-
 const addListeners = () => {};
 
 export const PrintPokemonPage = () => {
