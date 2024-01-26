@@ -1,4 +1,4 @@
-import { initTemplate, initControler } from "./utils/initTemplate";
+import { initControler,initTemplate } from "./src/utils";
 import "./style.css";
 
 initTemplate();

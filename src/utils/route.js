@@ -1,4 +1,4 @@
-import { getUser } from "../global/data/state/globalstate";
+import { getUser } from "../global/state/globalState";
 import { Login, PrintPokemonPage, printTemplateDashboard } from "../pages";
 
 export const initControler = (pageRender) => {

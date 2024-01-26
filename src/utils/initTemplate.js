@@ -1,4 +1,4 @@
-import { PrintTemplateFooter, PrintTemplateHeader } from "../src/components";
+import { PrintTemplateHeader, PrintTemplateFooter } from "../components";
 
 export const initTemplate = () => {
     const app = document.getElementById("app");
