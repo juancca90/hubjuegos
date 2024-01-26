@@ -1,4 +1,6 @@
-import { initTemplate } from "./utils/initTemplate";
+import { initTemplate, initControler } from "./utils/initTemplate";
 import "./style.css";
 
 initTemplate();
+
+initControler();
