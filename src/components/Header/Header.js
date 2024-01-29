@@ -1,8 +1,9 @@
-import "./Header.css";
+import "./Header.css"; //importa los estilos
 import { getUser } from "../../global/state/globalState";
 import { changeColorRGB } from "../../utils";
 import { initControler } from "../../utils/route";
 
+//Definicion del template, incluye imagenes y un contenedor de navegacion
 const template = () => `
     <img src="https://res.cloudinary.com/dq186ej4c/image/upload/v1682679162/header_giqdug.jpg" 
         alt="title hub game webside (app)" 
@@ -56,6 +57,6 @@ const addListeners = () => {;
 };
 
 export const PrintTemplateHeader = () => {
-    document.querySelector("header").innerHTML = template();
-    addListeners();
+    document.querySelector("header").innerHTML = template(); //Selecciona el elemento header y le asigna el HTML generado por el template
+    addListeners(); //llama a la funcion de los escuchadores
 };

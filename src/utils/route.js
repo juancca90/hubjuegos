@@ -1,10 +1,10 @@
 import { getUser } from "../global/state/globalState";
-import { Login, PrintPokemonPage, printTemplateDashboard } from "../pages";
+import { Login, PrintAhorcado, PrintPokemonPage, printTemplateDashboard, PrintTopoPage } from "../pages";
 
 export const initControler = (pageRender) => {
     switch (pageRender) {
         case undefined:
-            localStorage.getItem(getUser().name) ? printTemplateDashboard() : Login();
+            localStorage.getItem(getUser().name)? printTemplateDashboard() : Login();
             break;
         case "Pokemon":
             PrintPokemonPage();
@@ -13,13 +13,13 @@ export const initControler = (pageRender) => {
             printTemplateDashboard();
             break;
         case "Topo":
-            "PrintTopoPage()" //**En caso de que lo haya */
+            PrintTopoPage();
             break;
         case "Login":
             Login();
             break;
-        case "Memory":
-            "PrintMemoryPage()" //**En caso de que lo haya */
+        case "Ahorcado":
+            PrintAhorcado();
             break;
     }
 };

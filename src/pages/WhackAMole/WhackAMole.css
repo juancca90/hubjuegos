@@ -1,0 +1,30 @@
+.board {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.mole {
+    width: 150px;
+    height: 150px;
+    background-image: url('https://res.cloudinary.com/dwyfb6wlh/image/upload/v1706469715/mole_v5pjig.png');
+    background-size: contain;
+    animation: appear 0.9s;
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(130px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

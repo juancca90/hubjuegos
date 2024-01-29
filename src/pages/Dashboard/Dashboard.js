@@ -1,4 +1,4 @@
-import { getInfo, initControler } from "../../utils";
+import { game_over, getInfo, initControler } from "../../utils";
 import "./Dashboard.css";
 
 const template = () => `
@@ -14,7 +14,7 @@ const template = () => `
         </figure>
       </li>
       <li>
-        <figure>
+        <figure id="navigateMole">
           <img
             src="https://res.cloudinary.com/dq186ej4c/image/upload/v1689761641/pngwing.com_1_iq8zfk.png"
             alt=" go to wacka topo game"
@@ -23,7 +23,7 @@ const template = () => `
         </figure>
       </li>
       <li>
-        <figure>
+        <figure id="navigatePagina">
           <img
             src="https://res.cloudinary.com/dq186ej4c/image/upload/v1689761735/6168776_kfna36.png"
             alt="go to memory game"
@@ -37,10 +37,25 @@ const template = () => `
 
 const addEventListeners = () => {
   const navigatePokemon = document.getElementById("navigatePokemon");
+  const navigateMole = document.getElementById("navigateMole");
+  const navigatePagina = document.getElementById("navigatePagina");
+
   navigatePokemon.addEventListener("click", () => {
     initControler("Pokemon");
   });
+
+  navigateMole.addEventListener("click", () => {
+    initControler("Topo");
+  });
+
+  navigatePagina.addEventListener("click", () => {
+    initControler("Ahorcado");
+  });
+
+  
 };
+
+
 
 export const printTemplateDashboard = () => {
   document.querySelector("main").innerHTML = template();
@@ -49,5 +64,5 @@ export const printTemplateDashboard = () => {
 
   addEventListeners();
   getInfo();
-
+  
 };
